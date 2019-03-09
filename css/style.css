@@ -83,6 +83,18 @@ header .icon-phone {
     font-size: 20px;
 }
 
+.banner .sale {
+    width: 305px;
+    height: 360px;
+    background-position: 50% 50%;
+}
+
+.banner .slider {
+    width: 640px;
+    height: 305px;
+
+}
+
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
@@ -319,4 +331,11 @@ footer .socLinks a {
     text-decoration: none;
     text-align: center;
     padding: 5px 20px;
+}
+
+.input span {
+    font-size: 13px;
+    line-height: 22px;
+    font-style: italic;
+    color: #666666;
 }
