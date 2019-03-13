@@ -24,12 +24,31 @@ ul {
 }
 
 .clear::after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
 }
 
-header .login {
+headerWrap {
+    display: table;
+    width: 100%;
+}
+
+.headWrap>div  {
+    display: table-cell;
+    width: 33.33333333%;
+    vertical-align: top;
+}
+
+.headWrap .logo {
+    text-align: center;
+}
+
+.headWrap .right {
+    text-align: right;
+}
+
+header .login{
     font-size: 13px;
     line-height: 20px;
     color: #0069b4;
@@ -41,7 +60,7 @@ header .menu a {
     color: #333333;
 }
 
-header .menu li {
+.menu li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -54,6 +73,8 @@ header .phone {
 }
 
 header .callback {
+    display: table;
+    margin-left: auto;
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
@@ -94,26 +115,19 @@ header .icon-phone {
     font-size: 20px;
 }
 
-.banner .sale {
-    width: 305px;
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .sale {
+    width: 304px;
     height: 360px;
-    background-position: 50% 50%;
 }
 
-.banner .slider {
+.content .slider {
     width: 640px;
-    height: 305px;
-}
-
-
-.advantages {
-    width: calc(100% - 320px);
-    float: left;
-}
-
-.advantages .item {
-    width: 25%;
-    float: left;
+    height: 360px;
 }
 
 .advantages .item span {
@@ -130,12 +144,26 @@ header .icon-phone {
     color: #666666;
 }
 
+.advantages {
+    width: calc(100% - 320px);
+    float: left;
+}
+
+.advantages .item {
+    width: 25%;
+    float: left;
+}
 
 .subscribe {
     background-color: #64ba4a;
     width: 320px;
     float: left;
     padding: 20px;
+}
+
+.subscribe .wrap {
+    display: table;
+    width: 100%;
 }
 
 .subscribe label {
@@ -153,26 +181,26 @@ header .icon-phone {
 }
 
 .subscribe button {
+    display: table-cell;
+    vertical-align: middle;
     font-size: 13px;
     line-height: 37px;
     text-align: center;
     color: #ffffff;
+    border: none;
     width: 185px;
     background-color: #259c47;
-    border: none;
 }
 
 .subscribe .wrap span {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255,255,255,0.5);
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 25px;
 }
 
-
-.advSab + .catalog {
-    margin-top: 30px;
-}
-
-.filter + .cards {
+.advSub + .catalog {
     margin-top: 30px;
 }
 
@@ -189,18 +217,56 @@ header .icon-phone {
     color: #666666;
 }
 
-.card .img {
-    width: 220px;
-    height: 220px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.filter + .cards {
+    margin-top: 30px;
 }
 
-.card . title {
+.card {
+    position: relative;
+}
+
+.status {
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: -3px;
+    width: 43px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.status.hit {
+    background-color: #6eddcc;
+}
+
+.status.discount {
+    background-color: #ffed03;
+}
+
+.status.new {
+    background-color: #78ec71;
+}
+
+.card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+}
+
+.card .img {
+    width: 220px;
+    height: 220px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.card .small {
+    width: 50px;
+    height: 50px;
 }
 
 .card a {
@@ -214,7 +280,6 @@ header .icon-phone {
     font-weight: 600;
     line-height: 30px;
     color: #333333;
-    vertical-align: top;
 }
 
 .card .price .old {
@@ -231,9 +296,14 @@ header .icon-phone {
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    width: 100px;
     background-color: #ff7200;
     border: none;
-    width: 100px;
+}
+
+.widgets .wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .widgets h1 {
@@ -253,7 +323,6 @@ header .icon-phone {
 .widgets .item:nth-child(2) {
     width: 350px;
     height: 400px;
-    margin: 0 25px;
 }
 
 .widgets .item {
@@ -263,11 +332,6 @@ header .icon-phone {
     background-position: center;
 }
 
-.tabs li  {
-    display: inline-block;
-    padding: 0px 15px;
-}
-
 .tabs li a {
     font-size: 14px;
     text-decoration: none;
@@ -275,7 +339,12 @@ header .icon-phone {
     color: #999999;
 }
 
-.tabContent {
+.tabs li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.info .tabContent {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
@@ -297,7 +366,7 @@ footer a {
     color: #ffffff;
 }
 
-footer .socLinks a {
+footer .soclincs a {
     font-size: 21px;
 }
 
@@ -306,7 +375,7 @@ footer .socLinks a {
     float: left;
 }
 
-.footMenu>li {
+.footMenu > li {
     width: 50%;
     float: left;
 }
@@ -321,56 +390,93 @@ footer .socLinks a {
     float: left;
 }
 
-.caption {
+header .menu  .corp {
+    color: #ff7200;
+}
+
+.content .caption {
     font-size: 12px;
     line-height: 22px;
     color: #999999;
-
 }
 
-.caption a {
-    color: #999999;
+.content .caption a {
     text-decoration: none;
+    color: #999999;
 }
 
-.form>span {
+.corpClients .form>span {
     font-size: 13px;
     line-height: 22px;
     color: #333333;
 }
 
-.form label {
+.corpClients form {
+    background-color: #f9f9f9;
+}
+
+.corpClients form label {
     font-size: 13px;
     line-height: 22px;
     font-style: italic;
     color: #666666;
 }
 
-.form .logo label {
+.corpClients .logo>label {
     font-size: 13px;
+    line-height: normal;
     font-style: normal;
     color: #333333;
 }
 
-.logo span {
+.corpClients .logo span {
     font-size: 11px;
     color: #999999;
 }
 
-.logo label[for*="logo"] {
+.corpClients .logo li label {
     font-size: 13px;
     line-height: 22px;
+    font-style: normal;
     color: #666666;
 }
 
-.form button {
+.corpClients .input label {
+    font-size: 13px;
+    line-height: 22px;
+    font-style: normal;
+    text-decoration: underline;
+    color: #229647;
+}
+
+.corpClients .input span {
+    font-size: 13px;
+    color: #999999;
+}
+
+.corpClients .figure option {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.corpClients .date input {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.corpClients .info textarea {
+    width: 280px;
+    height: 125px;
+}
+
+.corpClients form button {
     font-size: 14px;
     line-height: 22px;
-    text-align: center;
     color: #ffffff;
     background-color: #ff7200;
     border: none;
-    width: 130px;
 }
 
 .product span {
@@ -392,15 +498,6 @@ footer .socLinks a {
     color: #ffffff;
     background-color: #64ba4a;
     text-decoration: none;
-    text-align: center;
-    padding: 5px 20px;
-}
-
-.input span {
-    font-size: 13px;
-    line-height: 22px;
-    font-style: italic;
-    color: #666666;
 }
 
 .content .bredcrumbs li,
@@ -441,4 +538,100 @@ footer .socLinks a {
     font-size: 13px;
     line-height: 22px;
     color: #0069b4;
+}
+
+.content .breadcrumbs li,
+.content .breadcrumbs li a {
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.container .checkout h1 {
+    font-size: 25px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.content .citySelection label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .citySelection select* {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+
+.content h2 {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.delivery ul li label* {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.delivery ul p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.delivery ul .orange {
+    color: #f26522;
+}
+
+.content .deliveryAddress label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .deliveryAddress span {
+    color: #ed1c24;
+}
+
+.content .paymentMeth label {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+    font-style: normal;
+}
+
+.content .paymentMeth p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.content .yourDate label{
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .yourDate span {
+    color: #ed1c24;
+}
+
+.content .yourDate .dateButton input {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    width: 185px;
+    background-color: #ea5b0c;
+    border: none;
 }
