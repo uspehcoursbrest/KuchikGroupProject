@@ -29,6 +29,28 @@ ul {
     clear: both;
 }
 
+.invisLink {
+    position: relative;
+    z-index: 1;
+}
+
+.invisLink > a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+}
+
+header {
+    padding-top: 27px;
+}
+
 headerWrap {
     display: table;
     width: 100%;
@@ -116,6 +138,7 @@ header .icon-phone {
 }
 
 .banner {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -223,6 +246,7 @@ header .icon-phone {
 
 .card {
     position: relative;
+    border-bottom: 1px solid #e4e4e4;
 }
 
 .status {
@@ -247,11 +271,33 @@ header .icon-phone {
 .status.new {
     background-color: #78ec71;
 }
+.card .content .buy {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card .content {
+    min-height: 110px;
+    position: relative;
+}
 
 .card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+    display: block;
+    padding-top: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
 }
 
 .card .img {
