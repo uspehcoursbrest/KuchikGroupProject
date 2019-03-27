@@ -95,11 +95,13 @@ header .calBack {
     border-bottom: 1px dashed #0069b4;
     display: table;
     margin-left: auto;
+    padding-top: 8px;
 }
 header .timing {
     font-size: 13px;
     line-height: 19px;
     color: #999999;
+    margin-top: 10px;
 }
 header .basked {
     font-size: 13px;
@@ -110,6 +112,7 @@ header .basked {
     padding-left: 28px;
     background-repeat: no-repeat;
     background-position: left center;
+    margin-top: 20px;
 }
 header .basked span {
     color: #1a9547;
@@ -146,10 +149,16 @@ header .icon-phone {
 .banner .sale {
     width: 305px;
     height: 360px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .banner .slider {
     width: 640px;
     height: 360px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .advSab {
@@ -222,6 +231,11 @@ header .icon-phone {
 .advSab + .catalog  {
     margin-top: 30px;
 }
+
+.filterSelect {
+    display: none;
+}
+
 .filter + .cards {
     margin-top: 30px;
 }
@@ -388,6 +402,7 @@ footer {
     color: #ffffff;
     background-color: #64ba4a;
     padding: 20px 0px;
+    position: relative;
 }
 footer a {
     text-decoration: none;
@@ -411,6 +426,10 @@ footer .socLinks a {
 .copyright {
     width: 25%;
     float: left;
+}
+
+.socLinks div {
+    display: inline-block;
 }
 /*Корпоративным клиентам*/
 /*CorpClients*/
