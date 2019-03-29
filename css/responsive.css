@@ -133,4 +133,35 @@
     .container {
         width: 100%;
     }
+
+    header,
+    .banner,
+    .advSab,
+    .info {
+        display: none;
+    }
+
+    header.mobile {
+        display: block;
+    }
+
+    .cards {
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card .img {
+        height: 270px;
+    }
+
+    .mobileSub {
+        display: block;
+    }
+
+    .socLinks div {
+        bottom: -2px;
+    }
 }
